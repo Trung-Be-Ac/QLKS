@@ -24,6 +24,8 @@ public class Login {
         ResultSet rs = ps.executeQuery();
         if (rs.next()) {
             int user_id = rs.getInt("`user_id`");
+            String user_name = rs.getString("`user_name`");
+            String user_password = rs.getString("`user_password`");
             String user_fullName = rs.getString("`user_fullName`");
             String user_cccd = rs.getString("`user_cccd`");
             String user_phoneNumber = rs.getString("`user_phoneNumber`");
@@ -34,7 +36,7 @@ public class Login {
             Long user_updatedAt = rs.getLong("`user_updatedAt`");
             Boolean user_isDelete = rs.getBoolean("`user_isDelete`");
             String user_role = rs.getString("`user_role`");
-            User user = new User(user_id, user_fullName, user_cccd, user_phoneNumber, user_gmail, user_idSocial,
+            User user = new User(user_id, user_name, user_password, user_fullName, user_cccd, user_phoneNumber, user_gmail, user_idSocial,
                     user_avatar, user_createdAt, user_updatedAt, user_isDelete, user_role);
             con.close();
             ps.close();

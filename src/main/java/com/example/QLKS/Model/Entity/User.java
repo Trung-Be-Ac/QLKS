@@ -10,6 +10,8 @@ import lombok.*;
 
 public class User {
     int user_id;
+    String user_name;
+    String user_password;
     String user_fullName;
     String user_cccd;
     String user_phoneNumber;

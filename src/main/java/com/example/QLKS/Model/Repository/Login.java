@@ -34,7 +34,7 @@ public class Login {
             Long user_updatedAt = rs.getLong("`user_updatedAt`");
             Boolean user_isDelete = rs.getBoolean("`user_isDelete`");
             String user_role = rs.getString("`user_role`");
-            User user = new User(user_id, user_fullName, user_cccd, user_phoneNumber, user_gmail, user_idSocial, user_avatar, user_createdAt, user_updatedAt, user_isDelete, user_role, UserName, Password);
+            User user = new User(user_id, user_fullName, user_cccd, user_phoneNumber, user_gmail, user_idSocial, user_avatar, user_role, user_role, user_createdAt, user_updatedAt, user_isDelete, user_role, UserName, Password);
             con.close();
             ps.close();
             rs.close();

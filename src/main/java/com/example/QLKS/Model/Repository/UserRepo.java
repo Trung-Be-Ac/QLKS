@@ -28,7 +28,7 @@ public class UserRepo {
         ps.setLong(8, user.getUser_updatedAt());
         ps.setString(9, user.getUser_role());
         ps.setString(10, user.getUser_userName());
-        ps.setString(11, user.getUser_passWord());
+        ps.setString(11, user.getUser_password());
         ps.executeUpdate();
         con.close();
         ps.close();
